@@ -1,0 +1,48 @@
+user_profile
+-----
+userID PK VARCHAR(255) FK >- rating.userID
+latitude DECIMAL(20)
+longitude DECIMAL(20)
+smoker VARCHAR(255)
+drink_level VARCHAR(255)
+ambience VARCHAR(255)
+transport VARCHAR(255)
+religion VARCHAR(255)
+-
+
+rating
+-----
+userID FK VARCHAR(255)
+placeID FK >- geoplaces.placeID INT
+rating INT
+food_rating INT
+service_rating INT
+-
+
+
+geoplaces
+-----
+placeID PK INT FK >- cuisine.placeID
+latitude DECIMAL(20)
+longitude DECIMAL(20)
+name VARCHAR(255)
+address VARCHAR(255)
+city VARCHAR(255)
+alcohol VARCHAR(255)
+smoking_area VARCHAR(255)
+accessibility VARCHAR(255)
+-
+
+
+parking
+-----
+placeID FK >- cuisine.placeID INT
+parking_lot VARCHAR(255)
+-
+
+
+cuisine
+-----
+placeID FK INT
+cuisine VARCHAR(255)
+-

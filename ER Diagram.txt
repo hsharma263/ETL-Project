@@ -20,6 +20,7 @@ city VARCHAR(255)
 alcohol VARCHAR(255)
 smoking_area VARCHAR(255)
 accessibility VARCHAR(255)
+ambience VARCHAR(255)
 -
 
 rating
